@@ -15,8 +15,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -34,7 +32,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2023 - Hexo</title>
+  <title>pyqt使用方法 - Hexo</title>
+  
+    <meta name="keywords" content="学习分享,pyqt,python">
   
 
   
@@ -118,7 +118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow blur "  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -741,7 +741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -819,73 +819,586 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        pyqt使用方法
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://github.com/zztqsh" rel="nofollow noopener">
+    <img no-lazy src="img/author_avatar.jpg">
+    <p>THEO</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2023/03/30/hello-world/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">学习分享</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/zztqsh/'><img src='/img/author_avatar.jpg'></a>
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 18, 2021</p>
+  </a>
+</div>
+
+          
         
-        <time>2023-03-30</time>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="pyqt使用方法" data-path="/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <center><a href="https://doc.qt.io/," title="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xaoxuu&#x2F;cdn-assets@master&#x2F;logo&#x2F;256&#x2F;safari.png" target="">QT 官方文档,</a></center>   
+
+<h2 id="一、基本功能"><a href="#一、基本功能" class="headerlink" title="一、基本功能"></a>一、基本功能</h2><h3 id="1-1、建立简单的窗口"><a href="#1-1、建立简单的窗口" class="headerlink" title="1.1、建立简单的窗口"></a>1.1、建立简单的窗口</h3><pre><code>import sys
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QWidget
+if __name__ == &#39;__main__&#39;:
+app = QApplication(sys.argv)
+w = QWidget()
+w.resize(250, 150)
+w.move(300, 300)
+w.setWindowTitle(&#39;Simple&#39;)
+w.setGeometry(300, 300, 300, 220)
+w.setWindowIcon(QIcon(&#39;pyqt使用方法/pic/提示.png&#39;))
+w.show()
+sys.exit(app.exec_())
+</code></pre>
+<p><img src="/pyqtlearning/1.png" class="lazyload" data-srcset="/pyqtlearning/1.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="示例窗口"></p>
+<p><code>app = QApplication(sys.argv)</code>:<br>每个PyQt5应用都必须创建一个应用对象。sys.argv是一组命令行参数的列表。Python可以在shell里运行，这个参数提供对脚本控制的功能。<br><code>w = QWidget()</code>:<br>QWidge控件是一个用户界面的基本控件，它提供了基本的应用构造器。默认情况下，构造器是没有父级的，没有父级的构造器被称为窗口（window）<br><code>w.resize(250, 150)</code>:<br>resize()方法能改变控件的大小，这里的意思是窗口宽250px，高150px<br><code>w.move(300, 300)</code>:<br>move()是修改控件位置的的方法。它把控件放置到屏幕坐标的(300, 300)的位置。注：屏幕坐标系的原点是屏幕的左上角<br><code>w.setGeometry(300, 300, 300, 220)</code>:<br>把窗口放到屏幕上并且设置窗口大小。参数分别代表屏幕坐标的x、y和窗口大小的宽、高（是resize和move的集合体）<br><code>w.setWindowTitle(&#39;Simple&#39;)</code>:<br>给窗口添加了一个标题，标题在标题栏展示<br><code>w.show()</code>:<br>show()能让控件在桌面上显示出来。控件在内存里创建，之后才能在显示器上显示出来<br><code>sys.exit(app.exec_())</code>:<br>当调用exit()方法或直接销毁主控件时，主循环就会结束。sys.exit()方法能确保主循环安全退出</p>
+<h3 id="1-2、控件"><a href="#1-2、控件" class="headerlink" title="1.2、控件"></a>1.2、控件</h3><h4 id="1-2-1、按钮"><a href="#1-2-1、按钮" class="headerlink" title="1.2.1、按钮"></a>1.2.1、按钮</h4><p>创建按钮：第一个参数是按钮的文本，第二个参数是按钮的父级组件：<br>   <code>  qbtn = QPushButton(&#39;按钮&#39;, self)</code><br>按钮绑定事件：<br>    <code>qbtn.clicked.connect(function)</code><br>给按钮添加提示语：<br><code>QToolTip.setFont(QFont(&#39;SansSerif&#39;, 10))</code><br><code>qbtn.setToolTip(&#39;This is a &lt;b&gt;QPushButton&lt;/b&gt; widget&#39;)</code></p>
+<a href="https://blog.csdn.net/qq_17351161/article/details/102907200?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162403539316780255224798%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=162403539316780255224798&biz_id=0&spm=1018.2226.3001.4450," title="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xaoxuu&#x2F;cdn-assets@master&#x2F;logo&#x2F;256&#x2F;safari.png" target="">QPushButton 按钮控件,</a>
+
+<h4 id="1-2-2、图像控件-QPixmap"><a href="#1-2-2、图像控件-QPixmap" class="headerlink" title="1.2.2、图像控件 QPixmap"></a>1.2.2、图像控件 QPixmap</h4><p>创建一个QPixmap 对象，它将传入的文件名作为参数:<br><code>pixmap = QPixmap(&quot;icon.png&quot;)</code><br>将pixmap放到QLabel控件中:<br><code>lbl = QLabel(self)</code><br><code>lbl.setPixmap(pixmap)</code></p>
+<h4 id="1-2-3、文本框-QLineEdit"><a href="#1-2-3、文本框-QLineEdit" class="headerlink" title="1.2.3、文本框 QLineEdit"></a>1.2.3、文本框 QLineEdit</h4><p>创建一个QLineEdit对象：<br><code>qle = QLineEdit(self)</code></p>
+<p><strong>文本的设置与获取</strong></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setText()</td>
+<td>插入文本</td>
+</tr>
+<tr>
+<td>text()</td>
+<td>获取文本内容</td>
+</tr>
+<tr>
+<td>displayText()</td>
+<td>获取文本显示的内容</td>
+</tr>
+</tbody></table>
+<p><strong>显示模式</strong></p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setEchoMode(QLineEdit_EchoMode)</td>
+<td>设置显示模式</td>
+</tr>
+<tr>
+<td>echoMode()</td>
+<td>获取文本框输入模式</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>QLineEdit_EchoMode</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Normal</td>
+<td>普通模式，显示输入的值</td>
+</tr>
+<tr>
+<td>NoEcho</td>
+<td>不输出</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>密文显示，显示都是星号</td>
+</tr>
+<tr>
+<td>PasswordEchoOnEdit</td>
+<td>输入时候显示，结束后密文</td>
+</tr>
+</tbody></table>
+<p><strong>输入限制</strong></p>
+<table>
+<thead>
+<tr>
+<th>相关API</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>setMaxLength(int)</td>
+<td>这是最大长度</td>
+</tr>
+<tr>
+<td>maxLength()</td>
+<td>获取最长度</td>
+</tr>
+<tr>
+<td>setReadOnly(bool)</td>
+<td>设置只读</td>
+</tr>
+<tr>
+<td>isReadOnly()</td>
+<td>获取是否只读</td>
+</tr>
+<tr>
+<td>setValidator(QValidator)</td>
+<td>设置验证器</td>
+</tr>
+<tr>
+<td>setInputMask(mask_str)</td>
+<td>掩码验证</td>
+</tr>
+<tr>
+<td>hasAcceptableInput()</td>
+<td>文本是否通过验证</td>
+</tr>
+</tbody></table>
+<p><strong>文本框的编辑状态</strong></p>
+<table>
+<thead>
+<tr>
+<th>相关API</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>isModified(bool)</td>
+<td>是否被编辑</td>
+</tr>
+<tr>
+<td>setModified()</td>
+<td>设置编辑状态</td>
+</tr>
+</tbody></table>
+<a href="https://blog.csdn.net/qq_17351161/article/details/102954815," title="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xaoxuu&#x2F;cdn-assets@master&#x2F;logo&#x2F;256&#x2F;safari.png" target="">QLineEdit 单行文本输入,</a>
+
+<h2 id="二、布局管理"><a href="#二、布局管理" class="headerlink" title="二、布局管理"></a>二、布局管理</h2><h3 id="2-1、水平布局"><a href="#2-1、水平布局" class="headerlink" title="2.1、水平布局"></a>2.1、水平布局</h3><h4 id="水平对齐"><a href="#水平对齐" class="headerlink" title="水平对齐"></a>水平对齐</h4><pre><code>layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+</code></pre>
+<h4 id="水平居中对齐"><a href="#水平居中对齐" class="headerlink" title="水平居中对齐"></a>水平居中对齐</h4><pre><code>layout = QHBoxLayout()
+layout.addStretch(1) # 前面增加一行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1) #后面增加一行
+</code></pre>
+<h4 id="水平两端对齐"><a href="#水平两端对齐" class="headerlink" title="水平两端对齐"></a>水平两端对齐</h4><pre><code>layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(2))
+</code></pre>
+<p><strong>布局对齐方式</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>QtCore.Qt.AlignLeft</td>
+<td>水平方向居左对齐</td>
+</tr>
+<tr>
+<td>QtCore.Qt.AlignRight</td>
+<td>水平方向居右对齐</td>
+</tr>
+<tr>
+<td>QtCore.Qt.AlignCenter</td>
+<td>水平方向居中对齐</td>
+</tr>
+<tr>
+<td>QtCore.Qt.AlignJustify</td>
+<td>水平方向两端对齐</td>
+</tr>
+<tr>
+<td>QtCore.Qt.AlignTop</td>
+<td>垂直方向靠上对齐</td>
+</tr>
+<tr>
+<td>QtCore.Qt.AlignBottom</td>
+<td>垂直方向靠下对齐</td>
+</tr>
+<tr>
+<td>QtCore.Qt.AlignVCenter</td>
+<td>垂直方向居中对齐</td>
+</tr>
+</tbody></table>
+<h3 id="2-2、垂直布局"><a href="#2-2、垂直布局" class="headerlink" title="2.2、垂直布局"></a>2.2、垂直布局</h3><h4 id="垂直对齐"><a href="#垂直对齐" class="headerlink" title="垂直对齐"></a>垂直对齐</h4><pre><code>layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+</code></pre>
+<h4 id="垂直顶部对齐"><a href="#垂直顶部对齐" class="headerlink" title="垂直顶部对齐"></a>垂直顶部对齐</h4><pre><code>layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1)  # 添加行
+</code></pre>
+<h4 id="垂直底部对齐"><a href="#垂直底部对齐" class="headerlink" title="垂直底部对齐"></a>垂直底部对齐</h4><pre><code>layout = QVBoxLayout()
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+</code></pre>
+<h4 id="垂直居中对齐"><a href="#垂直居中对齐" class="headerlink" title="垂直居中对齐"></a>垂直居中对齐</h4><pre><code>layout = QVBoxLayout()
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(1))
+layout.addWidget(QPushButton(str(2))
+layout.addStretch(1)  # 添加行
+</code></pre>
+<h4 id="垂直两端对齐"><a href="#垂直两端对齐" class="headerlink" title="垂直两端对齐"></a>垂直两端对齐</h4><pre><code>layout = QVBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addStretch(1)  # 添加行
+layout.addWidget(QPushButton(str(2))
+</code></pre>
+<p>增加两个控件的距离（两个按钮之间的距离）：</p>
+<pre><code>layout = QHBoxLayout()
+layout.addWidget(QPushButton(str(1))
+layout.addSpacing(100)
+layout.addWidget(QPushButton(str(2))
+</code></pre>
+<a href="https://cloud.tencent.com/developer/article/1437295," title="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xaoxuu&#x2F;cdn-assets@master&#x2F;logo&#x2F;256&#x2F;safari.png" target="">QT 布局管理,</a>
+
+<h2 id="三、对话框"><a href="#三、对话框" class="headerlink" title="三、对话框"></a>三、对话框</h2><p><strong>常用方法</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>information(QWidget parent,title,text,buttons,defaultButton)</td>
+<td>弹出消息对话框，参数解释：parent（指定的父窗口控件），title（对话框标题），text（对话框文本），buttons（多个标准按钮，默认设为OK按钮），defaultButton（默认选中的标准按钮，默认是第一个标准按钮）</td>
+</tr>
+<tr>
+<td>question(QWidget parent,title,text,buttons,defaultButton)</td>
+<td>弹出问答对话框</td>
+</tr>
+<tr>
+<td>warning(QWidget parent,title,text,buttons,defaultButton)</td>
+<td>弹出警告对话框</td>
+</tr>
+<tr>
+<td>critical(QWidget parent,title,text,buttons,defaultButton)</td>
+<td>弹出严重错误对话框</td>
+</tr>
+<tr>
+<td>about(QWidget parent,title,text)</td>
+<td>弹出关于对话框</td>
+</tr>
+<tr>
+<td>setTitle()</td>
+<td>设置标题</td>
+</tr>
+<tr>
+<td>setText()</td>
+<td>设置消息正文</td>
+</tr>
+<tr>
+<td>setIcon()</td>
+<td>设置弹出对话框的图片</td>
+</tr>
+</tbody></table>
+<p><strong>标准按钮类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>QMessage.OK</td>
+<td>同意操作</td>
+</tr>
+<tr>
+<td>QMessage.Cancel</td>
+<td>取消操作</td>
+</tr>
+<tr>
+<td>QMessage.Yes</td>
+<td>同意操作</td>
+</tr>
+<tr>
+<td>QMessage.No</td>
+<td>取消操作</td>
+</tr>
+<tr>
+<td>QMessage.Abort</td>
+<td>终止操作</td>
+</tr>
+<tr>
+<td>QMessage.Retry</td>
+<td>重试操作</td>
+</tr>
+<tr>
+<td>QMessage.Ignore</td>
+<td>忽略操作</td>
+</tr>
+</tbody></table>
+<p>创建对话框：<br><code>reply = QMessageBox.information(self,&quot;消息对话框&quot;,&quot;消息对话框正文&quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)</code></p>
+<p>例如：点击关闭窗口后提示”是否要退出程序”</p>
+<pre><code>    # 关闭按钮
+    self.exitbutton = QtWidgets.QPushButton(self.widget3)
+    self.exitbutton.setFixedSize(90, 40)
+    self.exitbutton.setText(&quot;关闭&quot;)
+    self.exitbutton.setObjectName(&quot;exitbutton&quot;)
+    self.exitbutton.setStyleSheet(qssStyle)
+    self.exitbutton.clicked.connect(self.exit)
+
+def exit(self):
+    # 点击关闭按钮后提示是否要关闭窗口
+    self.closeWindow = QtWidgets.QMessageBox(mainwindow)
+    self.okbtn =QtWidgets.QPushButton(QObject.tr(self,&quot;确定&quot;))
+    self.okbtn.setObjectName(&quot;okbtn&quot;)
+    self.okbtn.setStyleSheet(qssStyle)
+    self.canclebtn = QtWidgets.QPushButton(QObject.tr(self, &quot;取消&quot;))
+    self.canclebtn.setObjectName(&quot;canclebtn&quot;)
+    self.canclebtn.setStyleSheet(qssStyle)
+    self.closeWindow.addButton(self.okbtn,QMessageBox.AcceptRole)
+    self.closeWindow.addButton(self.canclebtn, QMessageBox.RejectRole)
+    self.closeWindow.setWindowTitle(&quot;提示&quot;)
+    self.closeWindow.setText(&quot;    确定退出程序？&quot;)
+    self.closeWindow.setWindowIcon(QIcon(&quot;KeChengSheJi/pyqt5/text/pic/提示.png&quot;))
+    self.closeWindow.setIconPixmap(QPixmap(&quot;KeChengSheJi/pyqt5/text/pic/提示 (1).png&quot;).scaled(30, 30))
+    self.closeWindow.setObjectName(&quot;closeWindow&quot;)
+    self.closeWindow.setStyleSheet(qssStyle)
+    self.closeWindow.show()
+    # 点击确定按钮后关闭整个程序
+    self.okbtn.clicked.connect(mainwindow.close)
+</code></pre>
+<a href="https://blog.csdn.net/qq_44880255/article/details/106967619," title="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;xaoxuu&#x2F;cdn-assets@master&#x2F;logo&#x2F;256&#x2F;safari.png" target="">QMessageBox弹出式对话框,</a>
+
+<h3 id="3-1、文件选择对话框"><a href="#3-1、文件选择对话框" class="headerlink" title="3.1、文件选择对话框"></a>3.1、文件选择对话框</h3><p>例如：选择图片</p>
+<pre><code>fname = QFileDialog.getOpenFileName(self, &quot;选择文件&quot;, &quot;/&quot;, &quot;Image Files(*.jpg;*.png)&quot;)
+</code></pre>
+<h3 id="3-2、消息对话框"><a href="#3-2、消息对话框" class="headerlink" title="3.2、消息对话框"></a>3.2、消息对话框</h3><pre><code>    btn = QPushButton()
+    btn.setText(&#39;弹出消息对话框&#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.information(self,&quot;消息对话框&quot;,&quot;消息对话框正文&quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+</code></pre>
+<h3 id="3-3、消息提问框"><a href="#3-3、消息提问框" class="headerlink" title="3.3、消息提问框"></a>3.3、消息提问框</h3><pre><code>    btn = QPushButton()
+    btn.setText(&#39;弹出消息对话框&#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.question(self,&quot;消息提问框&quot;,&quot;消息提问框正文&quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+</code></pre>
+<h3 id="3-4、警告对话框"><a href="#3-4、警告对话框" class="headerlink" title="3.4、警告对话框"></a>3.4、警告对话框</h3><pre><code>    btn = QPushButton()
+    btn.setText(&#39;弹出警告对话框&#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.warning(self,&quot;警告对话框&quot;,&quot;警告对话框正文&quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+</code></pre>
+<h3 id="3-5、严重错误对话框"><a href="#3-5、严重错误对话框" class="headerlink" title="3.5、严重错误对话框"></a>3.5、严重错误对话框</h3><pre><code>    btn = QPushButton()
+    btn.setText(&#39;弹出严重错误对话框&#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.critical(self,&quot;严重错误对话框&quot;,&quot;严重错误对话框正文&quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+</code></pre>
+<h3 id="3-6、关于对话框"><a href="#3-6、关于对话框" class="headerlink" title="3.6、关于对话框"></a>3.6、关于对话框</h3><pre><code>    btn = QPushButton()
+    btn.setText(&#39;弹出关于对话框&#39;)
+    btn.clicked.connect(show)
+    def show():
+         reply = QMessageBox.about(self,&quot;关于对话框&quot;,&quot;关于对话框正文&quot;,QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
+</code></pre>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2023/03/30/hello-world/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://theo1126.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/>http://theo1126.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-23T15:58:06+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jun 23, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>学习分享</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pyqt/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>pyqt</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/python/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>python</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://theo1126.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/&title=pyqt使用方法 - Hexo&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://theo1126.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/&title=pyqt使用方法 - Hexo&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://theo1126.github.io/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/&title=pyqt使用方法 - Hexo&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Qss修饰Qt</p>
+          <p class='content'>一、Qss实时编译器QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:
+
+QSS Editor下载https://sourceforge.net/projects/qss...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/17/%E8%8F%9C%E8%8F%9C%E7%9A%84Python%E7%AC%94%E8%AE%B0/'>
+          <p class='title'>菜菜的Python笔记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>Hello大家好，这里是菜菜的Python笔记📖
+初出茅庐的我👶，虽然还啥也不是🤣
+但是只要坚持学习🧐，也总会等到成为"大佬"的那一天🙈
+
+菜菜学习开始学习Python的第一本书
+
+《...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -893,139 +1406,28 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/img/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>THEO</h2>
-        
-        
-          <p>路过的繁华不是终点</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:1223230728@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/playlist?id=5145539461&amp;userid=503073179"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/" href="/categories/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/"
-            id="categoriesE4B8AAE4BABAE6849FE683B3"
-            ><div class='name'>个人感想</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" href="/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"
-            id="categoriesE585B3E4BA8EE58D9AE5AEA2"
-            ><div class='name'>关于博客</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"
-            id="categoriesE5ADA6E4B9A0E58886E4BAAB"
-            ><div class='name'>学习分享</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"
-            id="categoriesE5ADA6E4B9A0E8AEA1E58892"
-            ><div class='name'>学习计划</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E5%8A%9F%E8%83%BD"><span class="toc-text">一、基本功能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81%E5%BB%BA%E7%AB%8B%E7%AE%80%E5%8D%95%E7%9A%84%E7%AA%97%E5%8F%A3"><span class="toc-text">1.1、建立简单的窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81%E6%8E%A7%E4%BB%B6"><span class="toc-text">1.2、控件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1%E3%80%81%E6%8C%89%E9%92%AE"><span class="toc-text">1.2.1、按钮</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2%E3%80%81%E5%9B%BE%E5%83%8F%E6%8E%A7%E4%BB%B6-QPixmap"><span class="toc-text">1.2.2、图像控件 QPixmap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-3%E3%80%81%E6%96%87%E6%9C%AC%E6%A1%86-QLineEdit"><span class="toc-text">1.2.3、文本框 QLineEdit</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86"><span class="toc-text">二、布局管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1%E3%80%81%E6%B0%B4%E5%B9%B3%E5%B8%83%E5%B1%80"><span class="toc-text">2.1、水平布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E5%AF%B9%E9%BD%90"><span class="toc-text">水平对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90"><span class="toc-text">水平居中对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B0%B4%E5%B9%B3%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90"><span class="toc-text">水平两端对齐</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2%E3%80%81%E5%9E%82%E7%9B%B4%E5%B8%83%E5%B1%80"><span class="toc-text">2.2、垂直布局</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90"><span class="toc-text">垂直对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E9%A1%B6%E9%83%A8%E5%AF%B9%E9%BD%90"><span class="toc-text">垂直顶部对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%BA%95%E9%83%A8%E5%AF%B9%E9%BD%90"><span class="toc-text">垂直底部对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E5%AF%B9%E9%BD%90"><span class="toc-text">垂直居中对齐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9E%82%E7%9B%B4%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90"><span class="toc-text">垂直两端对齐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">三、对话框</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1%E3%80%81%E6%96%87%E4%BB%B6%E9%80%89%E6%8B%A9%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">3.1、文件选择对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2%E3%80%81%E6%B6%88%E6%81%AF%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">3.2、消息对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3%E3%80%81%E6%B6%88%E6%81%AF%E6%8F%90%E9%97%AE%E6%A1%86"><span class="toc-text">3.3、消息提问框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4%E3%80%81%E8%AD%A6%E5%91%8A%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">3.4、警告对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5%E3%80%81%E4%B8%A5%E9%87%8D%E9%94%99%E8%AF%AF%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">3.5、严重错误对话框</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6%E3%80%81%E5%85%B3%E4%BA%8E%E5%AF%B9%E8%AF%9D%E6%A1%86"><span class="toc-text">3.6、关于对话框</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Qss/" style="font-size: 14px; color: #999">Qss</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 14px; color: #999">c语言</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/pyqt/" style="font-size: 17.33px; color: #828282">pyqt</a> <a href="/tags/python/" style="font-size: 20.67px; color: #6c6c6c">python</a> <a href="/tags/react/" style="font-size: 14px; color: #999">react</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/" style="font-size: 14px; color: #999">个人感想</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">图像识别</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" style="font-size: 24px; color: #555">学习分享</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 17.33px; color: #828282">学习笔记</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" style="font-size: 14px; color: #999">学习计划</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%A0%BC%E5%BC%8F/" style="font-size: 14px; color: #999">文章格式</a> <a href="/tags/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">绑定域名</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">课程设计</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
 		  
@@ -1034,21 +1436,21 @@ Qu...
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="pyqt使用方法";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>

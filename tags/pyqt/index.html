@@ -34,7 +34,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2023 - Hexo</title>
+  <title>Tag: pyqt - Hexo</title>
   
 
   
@@ -118,7 +118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow blur "  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -741,7 +741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper  dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -818,12 +818,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
+        
+          
         
           
         
@@ -840,16 +844,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title" >
-      <a href="/2023/03/30/hello-world/">
-        Hello World
+      <a href="/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/">
+        Qss修饰Qt
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        一、Qss实时编译器QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:
+
+QSS Editor下载https://sourceforge.net/projects/qsseditor
+
+二、在python中使用Qss修饰QT2.1 读取Qss文件：# 读取Qss文件
+class ReadQss:
+   def __init__(self):
+   pass
+
+@sta...
       
     
   </div>
@@ -860,12 +872,71 @@ Qu...
           
           <a class='avatar' target="_blank" rel="noopener" href='https://github.com/zztqsh/'><img src='/img/author_avatar.jpg'></a>
         
-        <time>2023-03-30</time>
+        <time>2021-06-19</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/03/30/hello-world/'>
+          <a class='readmore' href='/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/'>
+            Read More
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow">
+  
+  
+  
+  
+    
+    <h2 class="article-title" >
+      <a href="/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
+        pyqt使用方法
+      </a>
+    </h2>
+  
+  <div class='md'>
+    
+      
+        QT 官方文档,   
+
+一、基本功能1.1、建立简单的窗口import sys
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QWidget
+if __name__ == &#39;__main__&#39;:
+app = QApplication(sys.argv)
+w = QWidget(...
+      
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/zztqsh'><img src='img/author_avatar.jpg'></a>
+        
+        <time>2021-06-18</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">学习分享</a>
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/'>
             Read More
           </a>
         </div>
@@ -885,7 +956,8 @@ Qu...
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -1041,14 +1113,14 @@ Qu...
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>

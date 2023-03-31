@@ -15,8 +15,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -34,7 +32,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2023 - Hexo</title>
+  <title>Qss修饰Qt - Hexo</title>
+  
+    <meta name="keywords" content="学习笔记,Qss,pyqt">
   
 
   
@@ -118,7 +118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow blur "  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -741,7 +741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -819,73 +819,378 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
-      
+    
+    
+      <h1 class="title">
+        Qss修饰Qt
+      </h1>
+      <div class='new-meta-box'>
         
           
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://github.com/zztqsh/" rel="nofollow noopener">
+    <img no-lazy src="/img/author_avatar.jpg">
+    <p>THEO</p>
+  </a>
+</div>
+
+          
         
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2023/03/30/hello-world/">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    </a>
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+
+
+          
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/zztqsh/'><img src='/img/author_avatar.jpg'></a>
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Jun 19, 2021</p>
+  </a>
+</div>
+
+          
         
-        <time>2023-03-30</time>
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="Qss修饰Qt" data-path="/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <h2 id="一、Qss实时编译器"><a href="#一、Qss实时编译器" class="headerlink" title="一、Qss实时编译器"></a>一、Qss实时编译器</h2><div class="note link green"><p>QSS Editor是用于编辑和实时预览Qt样式表的工具，下载地址为如下:</p></div>
+
+<center><div class="tag link"><a class="link-card" title="QSS Editor下载" target="_blank" rel="noopener" href="https://sourceforge.net/projects/qsseditor"><div class="left"><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII="/></div><div class="right"><p class="text">QSS Editor下载</p><p class="url">https://sourceforge.net/projects/qsseditor</p></div></a></div></center>
+
+<h2 id="二、在python中使用Qss修饰QT"><a href="#二、在python中使用Qss修饰QT" class="headerlink" title="二、在python中使用Qss修饰QT"></a>二、在python中使用Qss修饰QT</h2><h3 id="2-1-读取Qss文件："><a href="#2-1-读取Qss文件：" class="headerlink" title="2.1 读取Qss文件："></a>2.1 读取Qss文件：</h3><pre><code># 读取Qss文件
+class ReadQss:
+   def __init__(self):
+   pass
+
+@staticmethod
+def readQss(style):
+    with open(style, &#39;r&#39;) as f:
+    return f.read()
+
+styleFile = &#39;D:\\program\\Programming\\Python\\KeChengSheJi\\pyqt5\\text\\test_stye.qss&#39;
+qssStyle = ReadQss.readQss(styleFile)
+</code></pre>
+<h3 id="2-2-创建按钮，并设置属性名（-py文件）："><a href="#2-2-创建按钮，并设置属性名（-py文件）：" class="headerlink" title="2.2 创建按钮，并设置属性名（.py文件）："></a>2.2 创建按钮，并设置属性名（.py文件）：</h3><pre><code>mainwindow=QMainWindow()
+widget = QtWidgets.QWidget(mainwindow)
+fileselect = QtWidgets.QPushButton(self.widget2)
+#给按钮设置一个属性名称
+fileselect.setObjectName(&quot;fileselect&quot;)
+#给按钮装饰样式
+fileselect.setStyleSheet(qssStyle)
+fileselect.setFixedSize(150, 40)
+fileselect.setText(&quot;点击打开文件夹&quot;)
+</code></pre>
+<h3 id="2-3-qss文件："><a href="#2-3-qss文件：" class="headerlink" title="2.3 .qss文件："></a>2.3 .qss文件：</h3><pre><code>#fileselect&#123;
+ background-color: rgba(196,255,255,150);
+ border-style: outset;
+ border-width: 4px;
+ border-radius: 10px;
+ border-color: rgba(255, 225, 255, 150);
+ font:  17px &quot;Microsoft YaHei&quot;;
+ color:rgba(13,175,233,255);
+&#125;
+#fileselect:hover&#123;
+background-color:rgba(196,255,255, 255);
+border-color: rgba(255, 225, 255, 200);
+color:rgba(13,175,233,255);
+&#125;
+</code></pre>
+<h2 id="三、Qss的基本属性"><a href="#三、Qss的基本属性" class="headerlink" title="三、Qss的基本属性"></a>三、Qss的基本属性</h2><h3 id="3-1-背景属性（Background）"><a href="#3-1-背景属性（Background）" class="headerlink" title="3.1 背景属性（Background）"></a>3.1 背景属性（Background）</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>background</td>
+<td>在一个声明中设置所有的背景属性。</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>设置背景图像是否固定或者随着页面的其余部分滚动。</td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>设置元素的背景颜色。</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>设置元素的背景图像。</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>设置背景图像的开始位置。</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>设置是否及如何重复背景图像。</td>
+</tr>
+<tr>
+<td>background-clip</td>
+<td>规定背景的绘制区域。</td>
+</tr>
+<tr>
+<td>background-origin</td>
+<td>规定背景图片的定位区域。</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td>规定背景图片的尺寸。</td>
+</tr>
+</tbody></table>
+<p>###3.2 控制大小</p>
+<p>min-width和min-height两个属性可以用来指定一个部件的内容区域的最小大小，这两个值将影响部件的minimumSizeHint()</p>
+<pre><code>QPushButton &#123;
+  min-width: 68px;
+  min-height: 28px;
+&#125;
+</code></pre>
+<p>如果该属性没有被指定，最小大小将从部件的内容区域和当前样式中继承</p>
+<h3 id="3-3-处理伪类状态"><a href="#3-3-处理伪类状态" class="headerlink" title="3.3 处理伪类状态"></a>3.3 处理伪类状态</h3><pre><code>QPushButton &#123;
+  border: 2px outset green;
+  background: gray;
+&#125;
+QPushButton:pressed &#123;
+  border-style: inset;
+&#125; 
+</code></pre>
+<p><strong>伪状态列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>伪状态</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>checked</td>
+<td>button部件被选中</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>部件被禁用</td>
+</tr>
+<tr>
+<td>enabled</td>
+<td>部件被启用</td>
+</tr>
+<tr>
+<td>focus</td>
+<td>部件获得焦点</td>
+</tr>
+<tr>
+<td>hover</td>
+<td>鼠标位于部件上</td>
+</tr>
+<tr>
+<td>indeterminate</td>
+<td>checkbox或radiobutton被部分选中</td>
+</tr>
+<tr>
+<td>off</td>
+<td>部件可以切换，且处于off状态</td>
+</tr>
+<tr>
+<td>on</td>
+<td>部件可以切换，且处于on状态</td>
+</tr>
+<tr>
+<td>pressed</td>
+<td>部件被鼠标按下</td>
+</tr>
+<tr>
+<td>unchecked</td>
+<td>button部件未被选中</td>
+</tr>
+</tbody></table>
+<p>组合框样式举例：</p>
+<pre><code>#comboBox QAbstractItemView &#123;
+outline: 1px solid rgb(217,243,255);
+color: rgb(0,140,81);
+background:url(KeChengSheJi/pyqt5/qss/img_1.png);
+selection-background-color: lightgreen;
+selection-color: white;
+&#125;
+#comboBox:hover&#123;
+background:rgba(196,255,255,0);
+&#125;
+</code></pre>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/2023/03/30/hello-world/'>
-            Read More
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=http://theo1126.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/>http://theo1126.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-23T15:58:06+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Jun 23, 2021</p>
+  </a>
 </div>
 
-          </div>
         
       
-    
-  </section>
+        
+          
   
-    
-  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>学习笔记</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Qss/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Qss</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/pyqt/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>pyqt</p></a></div>
 
 
-	
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://theo1126.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/&title=Qss修饰Qt - Hexo&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://theo1126.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/&title=Qss修饰Qt - Hexo&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://theo1126.github.io/2021/06/19/QSS%E4%BF%AE%E9%A5%B0Qt/&title=Qss修饰Qt - Hexo&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>课程设计（图像识别）</p>
+          <p class='content'>↓↓点击先偷偷观看最终效果↓↓
+一、前言为了能够快速学习python语言，我大概花了几周的时间在自学这本《python编程从入门到实践》😵
+《python编程从入门到实践》
+菜鸟就是菜鸟，总是...</p>
+        </a>
+      
+      
+        <a class='next' href='/2021/06/18/pyqt%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/'>
+          <p class='title'>pyqt使用方法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>QT 官方文档,   
+
+一、基本功能1.1、建立简单的窗口import sys
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets impor...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -893,139 +1198,28 @@ Qu...
     
     
 
-<section class="widget blogger shadow desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='/img/avatar.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>THEO</h2>
-        
-        
-          <p>路过的繁华不是终点</p>
 
-        
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:1223230728@qq.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/playlist?id=5145539461&amp;userid=503073179"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/" href="/categories/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/"
-            id="categoriesE4B8AAE4BABAE6849FE683B3"
-            ><div class='name'>个人感想</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/" href="/categories/%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2/"
-            id="categoriesE585B3E4BA8EE58D9AE5AEA2"
-            ><div class='name'>关于博客</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/"
-            id="categoriesE5ADA6E4B9A0E58886E4BAAB"
-            ><div class='name'>学习分享</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
-            id="categoriesE5ADA6E4B9A0E7AC94E8AEB0"
-            ><div class='name'>学习笔记</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" href="/categories/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"
-            id="categoriesE5ADA6E4B9A0E8AEA1E58892"
-            ><div class='name'>学习计划</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Qss%E5%AE%9E%E6%97%B6%E7%BC%96%E8%AF%91%E5%99%A8"><span class="toc-text">一、Qss实时编译器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%9C%A8python%E4%B8%AD%E4%BD%BF%E7%94%A8Qss%E4%BF%AE%E9%A5%B0QT"><span class="toc-text">二、在python中使用Qss修饰QT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%AF%BB%E5%8F%96Qss%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-text">2.1 读取Qss文件：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%88%9B%E5%BB%BA%E6%8C%89%E9%92%AE%EF%BC%8C%E5%B9%B6%E8%AE%BE%E7%BD%AE%E5%B1%9E%E6%80%A7%E5%90%8D%EF%BC%88-py%E6%96%87%E4%BB%B6%EF%BC%89%EF%BC%9A"><span class="toc-text">2.2 创建按钮，并设置属性名（.py文件）：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-qss%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-text">2.3 .qss文件：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81Qss%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7"><span class="toc-text">三、Qss的基本属性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E8%83%8C%E6%99%AF%E5%B1%9E%E6%80%A7%EF%BC%88Background%EF%BC%89"><span class="toc-text">3.1 背景属性（Background）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E5%A4%84%E7%90%86%E4%BC%AA%E7%B1%BB%E7%8A%B6%E6%80%81"><span class="toc-text">3.3 处理伪类状态</span></a></li></ol></li></ol>
     </div>
   </section>
 
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Qss/" style="font-size: 14px; color: #999">Qss</a> <a href="/tags/c%E8%AF%AD%E8%A8%80/" style="font-size: 14px; color: #999">c语言</a> <a href="/tags/markdown/" style="font-size: 14px; color: #999">markdown</a> <a href="/tags/pyqt/" style="font-size: 17.33px; color: #828282">pyqt</a> <a href="/tags/python/" style="font-size: 20.67px; color: #6c6c6c">python</a> <a href="/tags/react/" style="font-size: 14px; color: #999">react</a> <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/" style="font-size: 14px; color: #999">个人感想</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB/" style="font-size: 14px; color: #999">图像识别</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/" style="font-size: 24px; color: #555">学习分享</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 17.33px; color: #828282">学习笔记</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/" style="font-size: 14px; color: #999">学习计划</a> <a href="/tags/%E6%96%87%E7%AB%A0%E6%A0%BC%E5%BC%8F/" style="font-size: 14px; color: #999">文章格式</a> <a href="/tags/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" style="font-size: 14px; color: #999">绑定域名</a> <a href="/tags/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" style="font-size: 14px; color: #999">课程设计</a>
-    </div>
-  </section>
-
-
-  
 
   
 
 
 </aside>
+
 
 
 		  
@@ -1034,21 +1228,21 @@ Qu...
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="Qss修饰Qt";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>

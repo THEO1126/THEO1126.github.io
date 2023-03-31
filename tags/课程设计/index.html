@@ -34,7 +34,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>Archive: 2023 - Hexo</title>
+  <title>Tag: 课程设计 - Hexo</title>
   
 
   
@@ -118,7 +118,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <body>
     
 
-<header id="l_header" class="l_header always shadow blur "  >
+<header id="l_header" class="l_header always shadow blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -741,7 +741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper  dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -818,9 +818,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper" id="pjax-container">
           
 
+
 <div class='l_main'>
-	
-		
+  
+    
+      
   <section class="post-list">
     
       
@@ -837,19 +839,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   
+    <div class='headimg-div'>
+      <a class='headimg-a' href="/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/">
+        <img class='headimg' src='https://gitee.com/qshzzt/picture/raw/main/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/AI%E6%B5%B7%E6%8A%A5.jpg'/>
+      </a>
+    </div>
+  
   
     
     <h2 class="article-title" >
-      <a href="/2023/03/30/hello-world/">
-        Hello World
+      <a href="/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/">
+        课程设计（图像识别）
       </a>
     </h2>
   
   <div class='md'>
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        ↓↓点击先偷偷观看最终效果↓↓
+一、前言为了能够快速学习python语言，我大概花了几周的时间在自学这本《python编程从入门到实践》😵
+《python编程从入门到实践》
+菜鸟就是菜鸟，总是要比别人多看几遍才能理解得透彻，因此我英语课上看，概率论课上也看😨，才微微的把python的基础法语弄明白了，一边学习顺便把一些些基础知识记录进我的”菜鸟”小本本菜菜的Python笔记毕竟菜鸟总要学...
       
     
   </div>
@@ -858,14 +868,17 @@ Qu...
       <div>
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/zztqsh/'><img src='/img/author_avatar.jpg'></a>
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/zztqsh'><img src='img/author_avatar.jpg'></a>
         
-        <time>2023-03-30</time>
+        <time>2021-06-22</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%88%86%E4%BA%AB/">学习分享</a>
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/03/30/hello-world/'>
+          <a class='readmore' href='/2021/06/22/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%BE%E5%83%8F%E8%AF%86%E5%88%AB%EF%BC%89/'>
             Read More
           </a>
         </div>
@@ -885,7 +898,8 @@ Qu...
   
 
 
-	
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -1041,14 +1055,14 @@ Qu...
   // header 这里无论是否开启pjax都需要
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
   
     // cover
     var cover_wrapper=document.querySelector('.cover-wrapper');
     
-    cover_wrapper.id="half";
-    cover_wrapper.style.display="";
+    cover_wrapper.id="none";
+    cover_wrapper.style.display="none";
     
   
 </script>
